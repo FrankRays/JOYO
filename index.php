@@ -15,13 +15,13 @@ session_start();
 </head>
 <body>
 <?php
-//	print_r($_SESSION);
-//	echo "Login user is" . $_SESSION["user"];
+	// If no session is there.. 
 	if(empty($_SESSION["user"])) {
 		echo "<h1>JOYO - Project Management Tool</h1>";
 		echo "<br><div class = 'main'><a href='signin.php' class='link'>Sign In</a>";
-  	echo "<a href='signup.html' class='link'>Sign up</a></div><br>";
- }
+  	echo "<a href='signup_page.php' class='link'>Sign up</a></div><br>";
+ 	}
+ 	// if session exists
 	else {
 		echo "<br>";
 		require 'main_page.php';

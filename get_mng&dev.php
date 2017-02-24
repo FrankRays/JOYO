@@ -2,7 +2,8 @@
   $arr = array(array());
   $add_name = "Manager";
   require 'database_connection.php';
-
+  
+   // Retrieving users for making them either manager or Developer or both.
    $sql = "SELECT user_id, user_name FROM signup";
    $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -22,13 +23,14 @@
   }
       
   echo "Select managers";
-  echo "<br>";
+  echo "<br><br>";
   list_members();
   echo "<br><br>";
   echo "Select Developers";
-  echo "<br>";
+  echo "<br><br>";
   list_members();
 
+  //This function will display the lists of all the users which are there in DB for selecting managers and developers for the particular workspace.
   function list_members() {
     global $i, $arr, $add_name;
     for ($j = 0; $j < $i; $j++) {
@@ -36,7 +38,7 @@
         if($k == 0)
         echo $arr[$j][$k];
         else 
-        echo "<input type='checkbox' name='". $add_name . "[]' value= " . $arr[$j][$k] . ">"; //. $add_name . $arr[$j][$k];
+        echo "<input type='checkbox' name='". $add_name . "[]' value= " . $arr[$j][$k] . ">"; 
        } 
     }
     $add_name = "Developer";

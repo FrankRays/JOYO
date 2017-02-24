@@ -1,6 +1,6 @@
 /* line 21, ../sass/homepage.scss */
 body {
-  background-image: url("../../a.gif");
+  background-image: url("../../background.jpg");
 }
 
 /* line 25, ../sass/homepage.scss */
@@ -48,56 +48,74 @@ h1 {
   position: absolute;
   top: 20%;
   left: 30%;
-  color: white;
+  color: sandybrown;
   font-weight: bold;
 }
 
 /* line 60, ../sass/homepage.scss */
 .labels {
-  display: inline;
+  display: inline-block;
+  width: 90px;
 }
 
-/* line 64, ../sass/homepage.scss */
-input {
-  background-color: #3CBC8D;
+/* line 65, ../sass/homepage.scss */
+input[type=text], input[type=password] {
+  background-color: wheat;
   padding: 10px;
   margin: 10px;
   box-sizing: border-box;
   border: none;
   color: white;
   font-size: 20px;
-  border-radius: 20px;
+  border-radius: 17px;
 }
 
-/* line 75, ../sass/homepage.scss */
+/* line 76, ../sass/homepage.scss */
+input[type=submit], input[type=button] {
+  background-color: initial;
+  font-size: 20px;
+  font-family: Courier;
+  border-radius: 17px;
+  border-color: sandybrown;
+  padding: 10px;
+  width: 124px;
+  color: white;
+}
+
+/* line 87, ../sass/homepage.scss */
+input[type=button] {
+  width: 400px;
+}
+
+/* line 91, ../sass/homepage.scss */
 table {
   border-collapse: collapse;
   width: 100%;
 }
 
-/* line 80, ../sass/homepage.scss */
+/* line 96, ../sass/homepage.scss */
 th, td {
   text-align: left;
   padding: 8px;
 }
 
-/* line 85, ../sass/homepage.scss */
+/* line 101, ../sass/homepage.scss */
 tr {
   color: white;
 }
 
-/* line 89, ../sass/homepage.scss */
+/* line 105, ../sass/homepage.scss */
 th {
-  background-color: #3cbc8d;
+  background-color: rgba(109, 59, 40, 0.64);
   color: white;
 }
 
-/* line 94, ../sass/homepage.scss */
-.list {
+/* line 110, ../sass/homepage.scss */
+span, .list {
   color: white;
 }
 
-/* line 98, ../sass/homepage.scss */
-.create_task {
+/* line 114, ../sass/homepage.scss */
+.create_task, .white {
   color: white;
 }

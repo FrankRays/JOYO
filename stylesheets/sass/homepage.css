@@ -1,6 +1,6 @@
 /* line 21, ../../sass/sass/homepage.scss */
 body {
-  background-image: url("../../abc.jpg");
+  background-image: url("../../a.gif  ");
 }
 
 /* line 25, ../../sass/sass/homepage.scss */
@@ -54,10 +54,11 @@ h1 {
 
 /* line 60, ../../sass/sass/homepage.scss */
 .labels {
-  display: inline;
+  display: inline-block;
+  width: 90px;
 }
 
-/* line 64, ../../sass/sass/homepage.scss */
+/* line 65, ../../sass/sass/homepage.scss */
 input {
   background-color: #3CBC8D;
   padding: 10px;
@@ -69,35 +70,35 @@ input {
   border-radius: 20px;
 }
 
-/* line 75, ../../sass/sass/homepage.scss */
+/* line 76, ../../sass/sass/homepage.scss */
 table {
   border-collapse: collapse;
   width: 100%;
 }
 
-/* line 80, ../../sass/sass/homepage.scss */
+/* line 81, ../../sass/sass/homepage.scss */
 th, td {
   text-align: left;
   padding: 8px;
 }
 
-/* line 85, ../../sass/sass/homepage.scss */
+/* line 86, ../../sass/sass/homepage.scss */
 tr {
   color: white;
 }
 
-/* line 89, ../../sass/sass/homepage.scss */
+/* line 90, ../../sass/sass/homepage.scss */
 th {
   background-color: #3cbc8d;
   color: white;
 }
 
-/* line 94, ../../sass/sass/homepage.scss */
-.list {
+/* line 95, ../../sass/sass/homepage.scss */
+span, .list {
   color: white;
 }
 
-/* line 98, ../../sass/sass/homepage.scss */
-.create_task {
+/* line 99, ../../sass/sass/homepage.scss */
+.create_task, .white {
   color: white;
 }

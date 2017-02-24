@@ -1,5 +1,6 @@
 <?php 
- $servername = "localhost";
+  // Setting up DB connection
+  $servername = "localhost";
   $username = "root";
   $password = "manager";
   $dbname = "project_mgmt";
