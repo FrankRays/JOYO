@@ -8,11 +8,6 @@
   echo "<br>";
   list_members();
 
-  echo "Select developer"; 
-  echo "<br>";
-  $role_name = "Developer";
-  list_members();
-
   function list_members() {
     global $i, $arr, $add_name, $wid, $role_id, $role_name;
     require 'database_connection.php';
@@ -22,7 +17,8 @@
      while($row = $result->fetch_assoc())  {
        $role_id = $row['role_id'];
     }
-  }    
+  }
+      
   if ($result->num_rows > 0) {
     $sql = "SELECT m.user_id, s.user_name FROM members AS m RIGHT JOIN signup AS s ON m.user_id = s.user_id WHERE m.user_id IS NOT NULL AND m.role_id = " . $role_id . " AND m.workspace_id = " . $wid ;
 
@@ -47,21 +43,10 @@
         if($k == 0) 
           echo $arr[$j][$k];
         else { 
-          echo $arr[$j][$k];
-          if ($add_name == "RemMng" & !empty($arr[$j][$k])) {
-            $arr[$j][$k] = $arr[$j][$k] . "-m";
             echo "<input type='checkbox' name='". $add_name . "[]' value= " . $arr[$j][$k] . ">";
-          }  
-          else {
-            $same_name = "RemMng";
-            $arr[$j][$k] = $arr[$j][$k] . "-d";
-            echo "<input type='checkbox' name='". $same_name . "[]' value= " . $arr[$j][$k] . ">";
           }  
         }
       } 
     }
-    echo "<br>";
-    $add_name = "RemDev";
   }
- }  
 ?>

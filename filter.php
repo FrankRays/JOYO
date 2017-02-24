@@ -1,6 +1,8 @@
 <?php
+require 'logoutdisplay.php';
 $task_id = $_GET['tid'];
 ?>
+<!-- Page for Filter option, to see the list of tasks from a start and end date. -->
 <html lang="en">
 <head>
   <title>Date Filter</title>
@@ -40,9 +42,10 @@ $task_id = $_GET['tid'];
   </script>
 </head>
 <body>
-  Start Date: <input type="text" id="datepicker"><br>
-  End Date: <input type="text" id="datepicker1">
-<div id ="txtHint"> </div><br><br>
-<input type="button" class="button" value="Click me" onclick="getdet()">
+  <div class="white">
+  <p class="labels">Start Date:</p> <input type="text" id="datepicker"><br>
+  <p class="labels">End Date:</p> <input type="text" id="datepicker1">
+  <div id ="txtHint"> </div><br><br>
+  <input type="button" class="button" value="Submit" onclick="getdet()">
 </body>
 </html>

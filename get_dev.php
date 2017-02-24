@@ -1,11 +1,12 @@
 <?php
   $arr = array(array());
+  $wid = $_GET['wid'];
   require 'database_connection.php';
   $add_name = "Developer";
-   $sql = "SELECT user_id, user_name FROM signup";
-   $result = $conn->query($sql);
+  $sql = "SELECT user_id, user_name FROM signup";
+  $result = $conn->query($sql);
     if ($result->num_rows > 0) {
-        $i = 0;
+     $i = 0;
      while($row = $result->fetch_assoc()) {
       $uname = $row["user_name"];
       $key = $row["user_id"];
@@ -15,15 +16,14 @@
         else 
         $arr[$i][$j] = $key;
       }
-
       $i++;
     }  
   }
 
   echo "Select Developers";
-  echo "<br>";
+  echo "<br><br>";
   list_members();
-
+  
   function list_members() {
     global $i, $arr, $add_name;
     for ($j = 0; $j < $i; $j++) {
@@ -31,7 +31,7 @@
         if($k == 0)
         echo $arr[$j][$k];
         else 
-        echo "<input type='radio' name='". $add_name . "' value= " . $arr[$j][$k] . ">" . $add_name . $arr[$j][$k] . "<br>";
+        echo "<input type='radio' name='". $add_name . "' value= " . $arr[$j][$k] . ">"; //. $add_name . $arr[$j][$k] . "<br>";
        } 
     }
   }
